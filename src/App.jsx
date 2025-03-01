@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import MobileMenu from "./components/MobileMenu";
 import Home from "./components/sections/Home";
 import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
 function App() {
   const onComplete = () => {
     setIsLoaded(true);
@@ -25,6 +26,7 @@ function App() {
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Home />
       <About />
+      <Skills />
     </div>
   );
 }
