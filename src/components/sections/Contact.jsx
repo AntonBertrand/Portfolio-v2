@@ -38,7 +38,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 px-4 min-h-screen flex flex-col items-center justify-center">
+    <section
+      id="contact"
+      className="py-16 px-4 min-h-screen flex flex-col items-center justify-center"
+    >
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">
           Get in Touch

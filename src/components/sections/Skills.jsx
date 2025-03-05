@@ -6,7 +6,10 @@ import { HiOutlineBolt } from "react-icons/hi2";
 
 const Skills = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4">
+    <section
+      id="skills"
+      className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4"
+    >
       <div className="flex flex-col items-center justify-center gap-8 w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center justify-center gap-2">
           <p className="text-lg font-bold text-gray-500">What I Know</p>

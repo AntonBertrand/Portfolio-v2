@@ -5,7 +5,10 @@ import { LuInfinity } from "react-icons/lu";
 
 const About = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4">
+    <section
+      id="about"
+      className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4"
+    >
       <div className="flex flex-col items-center justify-center gap-8 w-full max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right">
           About Me

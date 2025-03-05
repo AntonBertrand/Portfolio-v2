@@ -42,7 +42,10 @@ const Projects = () => {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4 w-full gap-12">
+    <section
+      id="projects"
+      className="min-h-screen flex flex-col items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4 w-full gap-12"
+    >
       {/* Header */}
       <div className="flex flex-col items-center justify-center gap-2">
         <p className="text-lg font-bold text-gray-500">Personal Projects</p>
