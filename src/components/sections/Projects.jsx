@@ -1,5 +1,9 @@
 import React from "react";
 import Project from "../Project";
+import portfolio1 from "../../assets/images/portfolio1.png";
+import portfolio2 from "../../assets/images/portfolio2.png";
+import portfolio3 from "../../assets/images/portfolio3.png";
+import portfolio4 from "../../assets/images/portfolio4.png";
 
 const Projects = () => {
   const projects = [
@@ -10,7 +14,7 @@ const Projects = () => {
       technologies: ["React", "Express", "NodeJS", "MongoDB", "TypeScript"],
       githubUrl: "https://github.com/AntonBertrand/Ecommerce",
       demoUrl: "https://ecommerce-frontend-blpu.onrender.com/",
-      imageUrl: "src/assets/images/placeholder.png",
+      imageUrl: portfolio1,
     },
     {
       title: "VanquisBooking",
@@ -19,7 +23,7 @@ const Projects = () => {
       technologies: ["React", "Express", "NodeJS", "MongoDB"],
       githubUrl: "https://github.com/AntonBertrand/Booking-App",
       demoUrl: "https://booking-app-frontend-8uip.onrender.com/",
-      imageUrl: "src/assets/images/placeholder.png",
+      imageUrl: portfolio2,
     },
     {
       title: "MyDiary",
@@ -28,7 +32,7 @@ const Projects = () => {
       technologies: ["React", "Express", "NodeJS", "MongoDB"],
       githubUrl: "https://github.com/AntonBertrand/Diary-App",
       demoUrl: "https://diary-app-35k5.onrender.com/",
-      imageUrl: "src/assets/images/placeholder.png",
+      imageUrl: portfolio3,
     },
     {
       title: "WhatsOn",
@@ -37,7 +41,7 @@ const Projects = () => {
       technologies: ["Java", "Firebase", "Android Studio"],
       githubUrl: "https://github.com/AntonBertrand/CS3100CW",
       demoUrl: "https://www.youtube.com/watch?v=WcMdWl8wv2M",
-      imageUrl: "src/assets/images/placeholder.png",
+      imageUrl: portfolio4,
     },
   ];
 
