@@ -21,20 +21,18 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4"
     >
       <div className="flex flex-col items-center justify-center gap-8 w-full max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
           {/* Profile Details */}
-
-          <div className="flex flex-col  px-10">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right">
+          <div className="flex flex-col w-full md:w-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center md:text-left">
               Anton Bertrand
             </h1>
-            <h2 className="text-white text-3xl md:text-4xl">
+            <h2 className="text-white text-3xl md:text-4xl text-center md:text-left">
               Full Stack Developer
             </h2>
 
             {/* Contact Details */}
-
-            <div className="w-full max-w-md space-y-4 p-6 rounded-lg bg-[#1a1b26] border border-gray-700 mt-8">
+            <div className="w-full space-y-4 p-4 md:p-6 rounded-lg bg-[#1a1b26] border border-gray-700 mt-8">
               <div className="relative">
                 <label className="text-gray-400 text-sm">Phone number</label>
                 <div className="flex items-center justify-between bg-[#13141c] p-3 rounded-md hover:cursor-pointer hover:bg-[#13141cc9] transition-all duration-100">
@@ -124,7 +122,6 @@ const Home = () => {
           </div>
 
           {/* Profile Image */}
-
           <div>
             <img
               src="src\assets\images\placeholder.png"
