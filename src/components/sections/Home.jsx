@@ -122,11 +122,14 @@ const Home = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="relative">
+          <div className="relative isolate">
+            <div className="absolute inset-0 -z-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-50 blur-[150px] w-[800px] h-[400px] md:h-[800px]" />
+            </div>
             <img
               src="src\assets\images\FlatAvatar.png"
               alt="Anton"
-              className="w-[600px] rounded-4xl hover:cursor-pointer hover:scale-105 transition-all duration-300"
+              className="w-[600px] rounded-4xl hover:cursor-pointer hover:scale-105 transition-all duration-300 relative"
             />
             <div className="absolute left-1/2 bottom-8 -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-24 md:right-8 flex gap-6">
               <a
