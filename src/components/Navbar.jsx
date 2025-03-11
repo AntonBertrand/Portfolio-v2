@@ -34,6 +34,12 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
               About
             </a>
             <a
+              href="#experience"
+              className="text-white hover:text-gray-300 transition-colors"
+            >
+              Experience
+            </a>
+            <a
               href="#skills"
               className="text-white hover:text-gray-300 transition-colors"
             >
