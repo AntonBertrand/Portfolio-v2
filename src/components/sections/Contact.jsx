@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,15 +43,33 @@ const Contact = () => {
       id="contact"
       className="py-16 px-4 min-h-screen flex flex-col items-center justify-center"
     >
-      <div className="text-center mb-12">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-center mb-12"
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">
           Get in Touch
         </h2>
-      </div>
+      </motion.div>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8"
+      >
         {/* Left Column - Contact Information */}
-        <div className="bg-white/1 border border-gray-700 p-8 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-white/1 border border-gray-700 p-8 rounded-2xl"
+        >
           <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
           <p className="text-gray-300 mb-8">
             I'm always interested in hearing about new projects and
@@ -60,7 +79,13 @@ const Contact = () => {
 
           <div className="space-y-6">
             {/* Phone */}
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+            >
               <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-blue-500"
@@ -80,10 +105,16 @@ const Contact = () => {
                 <p className="text-gray-400">Phone</p>
                 <p>+44 7711289437</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Email */}
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+            >
               <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-green-500"
@@ -103,10 +134,16 @@ const Contact = () => {
                 <p className="text-gray-400">Email</p>
                 <p>AntonBertrand@hotmail.com</p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Location */}
-            <div className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+            >
               <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-purple-500"
@@ -132,12 +169,18 @@ const Contact = () => {
                 <p className="text-gray-400">Location</p>
                 <p>England, London</p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column - Contact Form */}
-        <div className="bg-white/1 border border-gray-700 p-8 rounded-2xl">
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="bg-white/1 border border-gray-700 p-8 rounded-2xl"
+        >
           <div className="flex items-center gap-2 mb-6">
             <svg
               className="w-6 h-6 text-blue-500"
@@ -155,7 +198,14 @@ const Contact = () => {
             <h3 className="text-2xl font-bold">Send a Message</h3>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <motion.form
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
             <div>
               <label htmlFor="email" className="block text-gray-400 mb-2">
                 Email
@@ -220,9 +270,9 @@ const Contact = () => {
               </svg>
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>
-          </form>
-        </div>
-      </div>
+          </motion.form>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "../Project";
+import { motion } from "framer-motion";
 import portfolio1 from "../../assets/images/portfolio1.png";
 import portfolio2 from "../../assets/images/portfolio2.png";
 import portfolio3 from "../../assets/images/portfolio3.png";
@@ -51,18 +52,39 @@ const Projects = () => {
       className="min-h-screen flex flex-col items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4 w-full gap-12"
     >
       {/* Header */}
-      <div className="flex flex-col items-center justify-center gap-2">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center justify-center gap-2"
+      >
         <p className="text-lg font-bold text-gray-500">Personal Projects</p>
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right">
           Projects
         </h1>
-      </div>
+      </motion.div>
+
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 gap-12">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 gap-12"
+      >
         {projects.map((project, index) => (
-          <Project key={index} {...project} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 * (index + 1), duration: 0.8 }}
+          >
+            <Project {...project} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
