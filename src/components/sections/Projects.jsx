@@ -71,7 +71,7 @@ const Projects = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 gap-12"
+        className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 gap-12 auto-rows-fr"
       >
         {projects.map((project, index) => (
           <motion.div
@@ -80,6 +80,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 * (index + 1), duration: 0.8 }}
+            className="flex"
           >
             <Project {...project} />
           </motion.div>
