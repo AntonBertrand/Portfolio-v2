@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import avatarImage from "/src/assets/images/FlatAvatar.png";
 
 const Home = () => {
   const [copiedStates, setCopiedStates] = useState({
@@ -127,7 +128,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-50 blur-[150px] w-[800px] h-[400px] md:h-[800px]" />
             </div>
             <img
-              src="src\assets\images\FlatAvatar.png"
+              src={avatarImage}
               alt="Anton"
               className="w-[600px] rounded-4xl hover:cursor-pointer hover:scale-105 transition-all duration-300 relative"
             />
