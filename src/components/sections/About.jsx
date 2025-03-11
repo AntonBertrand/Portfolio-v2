@@ -24,7 +24,7 @@ const About = () => {
             techniques in a timely manner.
           </p>
         </div>
-        <div className="flex flex-row gap-4 mt-8">
+        <div className="flex flex-col md:flex-row gap-4 mt-8">
           <div className="border border-gray-700 rounded-lg p-6 flex flex-col items-center justify-center text-center gap-2 bg-white/1 hover:bg-white/2 transition-all duration-300 ">
             <div className="w-[50px] h-[50px] flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 hover:scale-110 transition-all duration-300">
               <CgWebsite className="text-3xl text-white" />
