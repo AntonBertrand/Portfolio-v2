@@ -72,9 +72,8 @@ const Contact = () => {
         >
           <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
           <p className="text-gray-300 mb-8">
-            I'm always interested in hearing about new projects and
-            opportunities. Whether you have a question or just want to say hi,
-            I'll try my best to get back to you!
+            I'm always interested in hearing about new opportunities. Drop me a
+            message and I'll get back to you ASAP.
           </p>
 
           <div className="space-y-6">
