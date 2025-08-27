@@ -6,6 +6,8 @@ import portfolio2 from "../../assets/images/portfolio2.png";
 import portfolio3 from "../../assets/images/portfolio3.png";
 import portfolio4 from "../../assets/images/portfolio4.png";
 import portfolio5 from "../../assets/images/portfolio5.png";
+import portfolio6 from "../../assets/images/portfolio6.png";
+import placeholder from "../../assets/images/placeholder.png";
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,9 +16,26 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Founders Hut",
+      description:
+        "Founders Hut is an online platform which provides detailed case studies of succesful entrepreneurs who built online businesses and detailed online business ideas. This is a full stack web application which has deployed to production. Users can view a specific numbers of case studies and business ideas for free, though they can purchase a subscription to have full access to the entire database of case studies and business ideas.",
+      technologies: [
+        "NextJs",
+        "Tailwind",
+        "TypeScript",
+        "Clerk",
+        "MongoDB",
+        "Stripe",
+        "Sentry",
+      ],
+      githubUrl: "",
+      demoUrl: "https://www.foundershut.com/",
+      imageUrl: portfolio6,
+    },
+    {
       title: "QR Sharp",
       description:
-        "QR Sharp is a SaaS (Software as a Service) product that allows users to sign up and create fully customizable QR Codes that will link to a URL of their choice. The user can then view detailed analytics to track who has scanned their QR Codes, which includes demographic analysis for Country, Browser, and Operating System of the visitors. The QR Codes generated are stored in the user's dashboard, where they can be downloaded/edited/deleted.",
+        "QR Sharp is a SaaS product that allows users to sign up and create fully customizable QR Codes that will link to a URL of their choice. The user can then view detailed analytics to track who has scanned their QR Codes, which includes demographic analysis for Country, Browser, and Operating System of the visitors. The QR Codes generated are stored in the user's dashboard, where they can be downloaded/edited/deleted. Demo Account: demo@live.com, Password: password",
       technologies: [
         "React",
         "Express",

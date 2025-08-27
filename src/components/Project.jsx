@@ -13,6 +13,10 @@ import mongoLogo from "../assets/mongo.svg";
 import nodeLogo from "../assets/node.svg";
 // Add TypeScript import
 import typescriptLogo from "../assets/typescript.svg";
+import nextjsLogo from "../assets/nextjs.svg";
+import clerkLogo from "../assets/clerk.svg";
+import sentryLogo from "../assets/sentry.svg";
+import stripeLogo from "../assets/stripe.svg";
 
 // Add this object at the top of your component or in a separate config file
 const techLogos = {
@@ -27,6 +31,10 @@ const techLogos = {
   MongoDB: mongoLogo,
   NodeJS: nodeLogo,
   TypeScript: typescriptLogo,
+  NextJs: nextjsLogo,
+  Clerk: clerkLogo,
+  Sentry: sentryLogo,
+  Stripe: stripeLogo,
   // Add more mappings as needed
 };
 
@@ -39,7 +47,7 @@ const Project = ({
   imageUrl,
 }) => {
   return (
-    <div className="flex flex-col border border-gray-700 rounded-2xl flex-col bg-white/1 hover:bg-white/2 transition-all duration-300 gap-2 overflow-hidden h-full">
+    <div className="flex flex-col border border-gray-700 rounded-2xl bg-white/1 hover:bg-white/2 transition-all duration-300 gap-2 overflow-hidden h-full">
       <div className="w-full overflow-hidden relative group">
         <img
           src={imageUrl}
@@ -47,14 +55,16 @@ const Project = ({
           alt={title}
         />
         <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/50 md:bg-transparent md:opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300 cursor-pointer"
-          >
-            GitHub
-          </a>
+          {githubUrl && (
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300 cursor-pointer"
+            >
+              GitHub
+            </a>
+          )}
           <a
             href={demoUrl}
             target="_blank"
