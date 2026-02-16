@@ -4,14 +4,24 @@ import { motion } from "framer-motion";
 const Experience = () => {
   const experiences = [
     {
+      company: "WebExpenses",
+      title: "Software Engineer",
+      duration: "January 2026 - Present",
+      description: [
+        "Implemented solutions using Java, Spring Boot, and React, with a focus on performance and scalability.",
+        "Writing and maintaining automation tests using JUnit.",
+        "Directly working with product owners to understand and propose business solutions.",
+      ],
+    },
+    {
       company: "Atos (NS&I)",
       title: "Dev Ops Engineer",
-      duration: "February 2023 - Present",
+      duration: "February 2023 - January 2026",
       description: [
-        "Maintain Linux-based systems, analysing logs, containers, and server health to resolve potential issues.",
-        "Develop and execute SQL scripts to investigate and resolve customer support tickets.",
-        "Develop and implement user stories using Scala, Scala Play, and Java.",
-        "Deploy and maintain software implementations, ensuring robust and scalable solutions.",
+        "Implemented features in Scala/Play and Java, containerised as Docker images, and managed Jenkins pipelines to promote through SIT, UAT, and Production.",
+        "Wrote ScalaTest, Twirl view and JUnit tests to ensure most issues were caught before they reached the test team.",
+        "Developed and executed SQL scripts to investigate and resolve customer support tickets.",
+        "Monitored services using ElasticSearch and AWS CloudWatch, set up alerts, and leveraged dashboards to support incident response.",
       ],
     },
     {
@@ -22,7 +32,7 @@ const Experience = () => {
         "Developed user stories with Pega and Java on the backend and React on the frontend.",
         "Configured various Pega components, including properties, data transforms, flow actions, and case types.",
         "Set up REST services and connectors based on project requirements to improve system integrations.",
-        "Assisted with unit testing to validate implemented rules and ensure system reliability.",
+        "Carried out unit testing to validate implemented rules and ensure system reliability.",
       ],
     },
     {
