@@ -37,7 +37,19 @@ html, body {
     .animate-loading-bar {
         animation: loading 0.8s ease infinite;
     }
-    
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .animate-marquee {
+        animation: marquee 40s linear infinite;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -64,3 +76,10 @@ html, body {
     scrollbar-width: thin;
     scrollbar-color: #3f3f3f #1e1e1e;
   }
+@theme {
+    --color-primary: rgb(193 78 218);
+}
+
+:root {
+    --color-primary-rgb: 193, 78, 218;
+}
