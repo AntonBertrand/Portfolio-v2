@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import LoadingScreen from "./components/LoadingScreen";
 import "./index.css";
@@ -10,6 +11,9 @@ import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Experience from "./components/sections/Experience";
+import Agency from "./components/pages/Agency";
+import AgencyShowcase from "./components/sections/AgencyShowcase";
+
 function App() {
   const onComplete = () => {
     setIsLoaded(true);
@@ -24,15 +28,27 @@ function App() {
         className={`transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
         } bg-black text-gray-100`}
-      ></div>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Contact />
+      >
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <About />
+                <Skills />
+                <Projects />
+                <Experience />
+                <AgencyShowcase />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/agency" element={<Agency />} />
+        </Routes>
+      </div>
     </div>
   );
 }
