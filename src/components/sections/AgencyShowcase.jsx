@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import uaConstruction from "../../assets/images/agency/ua-construction.png";
-import berra from "../../assets/images/agency/berra.png";
-import foundersHut from "../../assets/images/agency/foundershut.png";
-import strivor from "../../assets/images/agency/strivor.png";
-import bespokeDashboard from "../../assets/images/agency/bespoke-dashboard.png";
-import spaceono from "../../assets/images/agency/spaceono.png";
+import uaConstruction from "../../assets/images/agency/ua-construction.webp";
+import berra from "../../assets/images/agency/berra.webp";
+import foundersHut from "../../assets/images/agency/foundershut.webp";
+import strivor from "../../assets/images/agency/strivor.webp";
+import bespokeDashboard from "../../assets/images/agency/bespoke-dashboard.webp";
+import spaceono from "../../assets/images/agency/spaceono.webp";
 
 const AGENCY_URL = "https://www.vanquish-digital.com";
 

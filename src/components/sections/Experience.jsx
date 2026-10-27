@@ -88,7 +88,7 @@ const Experience = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="w-full md:w-3/4"
+          className="w-full max-w-4xl"
         >
           {experiences.map((exp, index) => (
             <motion.div
@@ -97,16 +97,16 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 * (index + 1), duration: 0.8 }}
-              className="mb-8 p-6 bg-white/1 rounded-lg relative 
-                       hover:translate-x-3 transition-transform duration-300 cursor-pointer
+              className="mb-6 sm:mb-8 p-5 sm:p-6 bg-white/1 rounded-lg relative
+                       md:hover:translate-x-3 transition-transform duration-300
                        border border-gray-700"
             >
-              <h3 className="text-2xl text-white mb-1">{exp.company}</h3>
+              <h3 className="text-xl sm:text-2xl text-white mb-1">{exp.company}</h3>
               <h4 className="text-lg text-blue-500 mb-2">{exp.title}</h4>
               <span className="text-gray-500 text-sm block mb-4">
                 {exp.duration}
               </span>
-              <ul className="list-disc list-inside space-y-2">
+              <ul className="list-disc pl-5 space-y-2">
                 {exp.description.map((item, idx) => (
                   <li key={idx} className="text-gray-400">
                     {item}

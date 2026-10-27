@@ -8,14 +8,15 @@ const MobileMenu = ({ menuOpen, setMenuOpen }) => {
 
                      ${
                        menuOpen
-                         ? "h-screen opacity-100 pointer-events-auto"
+                         ? "h-dvh opacity-100 pointer-events-auto"
                          : "h-0 opacity-0 pointer-events-none"
                      }
                    `}
     >
       <button
         onClick={() => setMenuOpen(false)}
-        className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer"
+        aria-label="Close menu"
+        className="absolute top-4 right-4 w-11 h-11 flex items-center justify-center text-white text-4xl focus:outline-none cursor-pointer"
       >
         &times;
       </button>

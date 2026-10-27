@@ -1,14 +1,13 @@
 import React, { useState, useRef } from "react";
 import Project from "../Project";
 import { motion } from "framer-motion";
-import portfolio1 from "../../assets/images/portfolio1.png";
-import portfolio2 from "../../assets/images/portfolio2.png";
-import portfolio3 from "../../assets/images/portfolio3.png";
-import portfolio4 from "../../assets/images/portfolio4.png";
-import portfolio5 from "../../assets/images/portfolio5.png";
-import portfolio6 from "../../assets/images/portfolio6.png";
-import portfolio7 from "../../assets/images/portfolio7.png";
-import placeholder from "../../assets/images/placeholder.png";
+import portfolio1 from "../../assets/images/portfolio1.webp";
+import portfolio2 from "../../assets/images/portfolio2.webp";
+import portfolio3 from "../../assets/images/portfolio3.webp";
+import portfolio4 from "../../assets/images/portfolio4.webp";
+import portfolio5 from "../../assets/images/portfolio5.webp";
+import portfolio6 from "../../assets/images/portfolio6.webp";
+import portfolio7 from "../../assets/images/portfolio7.webp";
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -127,83 +126,71 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center justify-center gap-2"
+        className="flex flex-col items-center justify-center gap-3 text-center"
       >
-        <p className="text-lg font-bold text-gray-500">Personal Projects</p>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent leading-right">
+        <span className="rounded-full border border-gray-700 px-4 py-1 text-sm font-medium text-gray-400">
+          Personal Projects · {projects.length} total
+        </span>
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent pb-1">
           Projects
         </h1>
+        <p className="max-w-xl text-gray-400">
+          Full stack products and apps I've built end to end, from idea through
+          to deployment.
+        </p>
       </motion.div>
 
       {/* Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="grid grid-cols-1 md:grid-cols-2 w-full md:w-3/4 gap-12 auto-rows-fr"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-6xl gap-8 auto-rows-fr">
         {currentProjects.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 * (index + 1), duration: 0.8 }}
+            transition={{ delay: 0.1 * (index + 1), duration: 0.6 }}
             className="flex"
           >
             <Project {...project} />
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Pagination Controls */}
       {totalPages > 1 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="flex items-center justify-center gap-4 mt-8"
+        <nav
+          aria-label="Projects pagination"
+          className="flex flex-wrap items-center justify-center gap-2"
         >
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-lg ${
-              currentPage === 1
-                ? "bg-gray-700 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
-            } text-white transition-colors duration-300`}
+            className="px-4 h-10 rounded-lg border border-gray-700 text-sm text-gray-300 transition-colors hover:border-gray-500 hover:text-white disabled:opacity-30 disabled:pointer-events-none"
           >
             Previous
           </button>
-          <div className="flex gap-2">
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-              <button
-                key={page}
-                onClick={() => handlePageChange(page)}
-                className={`w-10 h-10 rounded-lg ${
-                  currentPage === page
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                } transition-colors duration-300`}
-              >
-                {page}
-              </button>
-            ))}
-          </div>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              aria-current={currentPage === page ? "page" : undefined}
+              className={`w-10 h-10 rounded-lg text-sm transition-colors ${
+                currentPage === page
+                  ? "bg-blue-600 text-white"
+                  : "border border-gray-700 text-gray-300 hover:border-gray-500 hover:text-white"
+              }`}
+            >
+              {page}
+            </button>
+          ))}
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-lg ${
-              currentPage === totalPages
-                ? "bg-gray-700 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
-            } text-white transition-colors duration-300`}
+            className="px-4 h-10 rounded-lg border border-gray-700 text-sm text-gray-300 transition-colors hover:border-gray-500 hover:text-white disabled:opacity-30 disabled:pointer-events-none"
           >
             Next
           </button>
-        </motion.div>
+        </nav>
       )}
     </section>
   );
