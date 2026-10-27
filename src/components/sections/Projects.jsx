@@ -18,6 +18,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Bespoke Dashboard",
+      date: "June, 2026",
       description:
         "Bespoke Dashboard is a private personal dashboard for tracking health, habits, skincare, spending and net worth in one place. Users build their own board by dragging on the widgets they care about and recolouring it to suit them. It includes daily logs for water, weight and workouts, recurring to-dos, progress photo comparisons and a net worth tracker. Each account's data is protected with row level security, and new features can be added through plugins.",
       technologies: ["Astro", "TypeScript", "JavaScript", "PostgreSQL", "Tailwind"],
@@ -27,6 +28,7 @@ const Projects = () => {
     },
     {
       title: "Founders Hut",
+      date: "May, 2025",
       description:
         "Founders Hut is an online platform which provides detailed case studies of succesful entrepreneurs who built online businesses and detailed online business ideas. This is a full stack web application which has deployed to production. Users can view a specific numbers of case studies and business ideas for free, though they can purchase a subscription to have full access to the entire database of case studies and business ideas.",
       technologies: [
@@ -44,6 +46,7 @@ const Projects = () => {
     },
     {
       title: "QR Sharp",
+      date: "October, 2023",
       description:
         "QR Sharp is a SaaS product that allows users to sign up and create fully customizable QR Codes that will link to a URL of their choice. The user can then view detailed analytics to track who has scanned their QR Codes, which includes demographic analysis for Country, Browser, and Operating System of the visitors. The QR Codes generated are stored in the user's dashboard, where they can be downloaded/edited/deleted. Demo Account: demo@live.com, Password: password",
       technologies: [
@@ -60,6 +63,7 @@ const Projects = () => {
     },
     {
       title: "ShopCart",
+      date: "August, 2023",
       description:
         "ShopCart is a full stack web application which allows users to create an account, view different headphones and add them to their shopping cart. When satisfied with their shopping basket, users can proceed to checkout where they're asked for payment details and shipping information. Upon validation, an order is created and stored in the database. Users can view their order history by navigating to their accounts profile page.",
       technologies: ["React", "Express", "NodeJS", "MongoDB", "TypeScript"],
@@ -69,6 +73,7 @@ const Projects = () => {
     },
     {
       title: "VanquisBooking",
+      date: "May, 2023",
       description:
         "This is a simplified Booking.com clone I've named VanquisBooking. This is a full stack application I created to practice development using the MERN stack. Users can register and login to view properties filtered by destination, date range, visitors, and room quantity. Specific rooms can be booked at each property and will be unavailable to others for the dates booked for.",
       technologies: ["React", "Express", "NodeJS", "MongoDB"],
@@ -78,6 +83,7 @@ const Projects = () => {
     },
     {
       title: "MyDiary",
+      date: "July, 2023",
       description:
         "MyDiary is a web application which allows users to create diary entries which they can use to capture their thoughts, moods, memories and anything else they would like to document. This is a full stack application built using the MERN stack. Users are able to signup and login to their own private dashboard in which they can view all their diary entries or search for specific ones.",
       technologies: ["React", "Express", "NodeJS", "MongoDB"],
@@ -87,6 +93,7 @@ const Projects = () => {
     },
     {
       title: "WhatsOn",
+      date: "November, 2020",
       description:
         "WhatsOn is an Android application targeted towards Brunel University students who lived on Campus or in the nearby area. The application allows these students to view all the events available in the area, as well as the ability to create their own events for other users to see. This allows them to take advantages of all the facilities available to them and keep them updated on what events are soon to take place, giving them a great University experience.",
       technologies: ["Java", "Firebase", "Android Studio"],

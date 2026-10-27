@@ -49,6 +49,7 @@ const Project = ({
   githubUrl,
   demoUrl,
   imageUrl,
+  date,
 }) => {
   return (
     <div className="flex flex-col border border-gray-700 rounded-2xl bg-white/1 hover:bg-white/2 transition-all duration-300 gap-2 overflow-hidden h-full">
@@ -81,7 +82,10 @@ const Project = ({
       </div>
       <div className="flex flex-col gap-3 p-4 flex-grow">
         <div className="flex flex-col gap-3 pb-4">
-          <p className="text-2xl font-bold">{title}</p>
+          <div className="flex flex-col gap-1">
+            <p className="text-2xl font-bold">{title}</p>
+            {date && <p className="text-sm font-semibold text-gray-500">{date}</p>}
+          </div>
           <p>{description}</p>
         </div>
         <div className="flex flex-row gap-4 mt-auto text-xs md:text-base overflow-x-auto pb-2 hide-scrollbar">
