@@ -61,7 +61,7 @@ const Agency = () => {
           </p>
         </div>
         <div
-          className="relative w-full max-w-[50%] mx-auto overflow-hidden"
+          className="relative w-full max-w-[90%] md:max-w-[50%] mx-auto overflow-hidden"
           style={{
             maskImage:
               "linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)",
@@ -76,13 +76,13 @@ const Agency = () => {
                 className="flex items-center gap-10 md:gap-14 shrink-0"
               >
                 {[
-                  { src: "/company-logos/Strivor-logo.png", alt: "Strivor" },
-                  { src: "/company-logos/berra-logo.png", alt: "Berra" },
+                  { src: "/company-logos/Strivor-logo.webp", alt: "Strivor" },
+                  { src: "/company-logos/berra-logo.webp", alt: "Berra" },
                   {
-                    src: "/company-logos/snugg-club-logo.png",
+                    src: "/company-logos/snugg-club-logo.webp",
                     alt: "Snugg Club",
                   },
-                  { src: "/company-logos/qr-sharp-logo.png", alt: "QR Sharp" },
+                  { src: "/company-logos/qr-sharp-logo.webp", alt: "QR Sharp" },
                 ].map((logo, i) => (
                   <div
                     key={`${setIndex}-${i}`}

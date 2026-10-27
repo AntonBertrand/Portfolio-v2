@@ -48,7 +48,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-12"
+        className="text-center mb-8 md:mb-12"
       >
         <h2 className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">
           Get in Touch
@@ -60,7 +60,7 @@ const Contact = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8"
+        className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
       >
         {/* Left Column - Contact Information */}
         <motion.div
@@ -68,7 +68,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-white/1 border border-gray-700 p-8 rounded-2xl"
+          className="bg-white/1 border border-gray-700 p-5 sm:p-8 rounded-2xl min-w-0"
         >
           <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
           <p className="text-gray-300 mb-8">
@@ -83,9 +83,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+              className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-700 md:hover:scale-105 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 shrink-0 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-blue-500"
                   fill="none"
@@ -100,7 +100,7 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-gray-400">Phone</p>
                 <p>+44 7711289437</p>
               </div>
@@ -112,9 +112,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+              className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-700 md:hover:scale-105 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 shrink-0 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="none"
@@ -129,9 +129,9 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-gray-400">Email</p>
-                <p>AntonBertrand@hotmail.com</p>
+                <p className="break-all">AntonBertrand@hotmail.com</p>
               </div>
             </motion.div>
 
@@ -141,9 +141,9 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1 }}
-              className="flex items-center gap-4 p-4 rounded-xl border border-gray-700 hover:scale-105 transition-all duration-300"
+              className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-700 md:hover:scale-105 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 shrink-0 bg-[#1a1f2e] rounded-lg flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-purple-500"
                   fill="none"
@@ -164,7 +164,7 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-gray-400">Location</p>
                 <p>England, London</p>
               </div>
@@ -178,7 +178,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-white/1 border border-gray-700 p-8 rounded-2xl"
+          className="bg-white/1 border border-gray-700 p-5 sm:p-8 rounded-2xl min-w-0"
         >
           <div className="flex items-center gap-2 mb-6">
             <svg

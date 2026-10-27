@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import avatarImage from "/src/assets/images/FlatAvatar.png";
+import avatarImage from "/src/assets/images/FlatAvatar.webp";
 
 const Home = () => {
   const [copiedStates, setCopiedStates] = useState({
@@ -22,13 +22,13 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center pt-32 pb-8 md:pt-16 sm:pt-20 px-4"
     >
       <div className="flex flex-col items-center justify-center gap-8 w-full max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 w-full">
           {/* Profile Details */}
-          <div className="flex flex-col w-full md:w-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center md:text-left">
+          <div className="flex flex-col w-full md:w-1/2 md:max-w-md shrink-0">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-center md:text-left">
               Anton Bertrand
             </h1>
-            <h2 className="text-white text-3xl md:text-4xl text-center md:text-left">
+            <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl text-center md:text-left">
               Full Stack Developer
             </h2>
 
@@ -41,7 +41,7 @@ const Home = () => {
                     type="tel"
                     value="+44 7711289437"
                     readOnly
-                    className="bg-transparent text-white w-full outline-none hover:cursor-pointer"
+                    className="bg-transparent text-white w-full min-w-0 outline-none hover:cursor-pointer"
                   />
                   <button
                     onClick={() => handleCopy("+44 7711289437", "phone")}
@@ -69,7 +69,7 @@ const Home = () => {
                     type="text"
                     value="AntonBertrand@hotmail.com"
                     readOnly
-                    className="bg-transparent text-white w-full outline-none hover:cursor-pointer "
+                    className="bg-transparent text-white w-full min-w-0 outline-none hover:cursor-pointer"
                   />
                   <button
                     onClick={() =>
@@ -99,7 +99,7 @@ const Home = () => {
                     type="text"
                     value="AntonBertrand"
                     readOnly
-                    className="bg-transparent text-white w-full outline-none hover:cursor-pointer"
+                    className="bg-transparent text-white w-full min-w-0 outline-none hover:cursor-pointer"
                   />
                   <button
                     onClick={() => handleCopy("AntonBertrand", "github")}
@@ -123,16 +123,16 @@ const Home = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="relative isolate">
+          <div className="relative isolate w-full max-w-[320px] sm:max-w-[420px] md:max-w-none md:w-1/2 lg:max-w-[600px]">
             <div className="absolute inset-0 -z-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-50 blur-[150px] w-[800px] h-[400px] md:h-[800px]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-40 blur-[100px] md:blur-[150px] scale-110" />
             </div>
             <img
               src={avatarImage}
               alt="Anton"
-              className="w-[600px] rounded-4xl hover:cursor-pointer hover:scale-105 transition-all duration-300 relative"
+              className="w-full h-auto rounded-4xl hover:cursor-pointer hover:scale-105 transition-all duration-300 relative"
             />
-            <div className="absolute left-1/2 bottom-8 -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-24 md:right-8 flex gap-6">
+            <div className="absolute left-1/2 bottom-4 sm:bottom-8 -translate-x-1/2 md:left-auto md:translate-x-0 md:bottom-12 lg:bottom-24 md:right-6 flex gap-4 sm:gap-6">
               <a
                 href="https://www.linkedin.com/in/anton-bertrand/"
                 target="_blank"
@@ -140,7 +140,7 @@ const Home = () => {
                 className="bg-[#1a1b26] p-3 rounded-full hover:bg-[#13141cc9] transition-all duration-200"
               >
                 <svg
-                  className="w-8 h-8 text-white hover:text-blue-500 transition-colors duration-200"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-white hover:text-blue-500 transition-colors duration-200"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -155,7 +155,7 @@ const Home = () => {
                 className="bg-[#1a1b26] p-3 rounded-full hover:bg-[#13141cc9] transition-all duration-200"
               >
                 <svg
-                  className="w-8 h-8 text-white hover:text-purple-500 transition-colors duration-200"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-white hover:text-purple-500 transition-colors duration-200"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
