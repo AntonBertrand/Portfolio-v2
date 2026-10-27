@@ -7,6 +7,7 @@ import portfolio3 from "../../assets/images/portfolio3.png";
 import portfolio4 from "../../assets/images/portfolio4.png";
 import portfolio5 from "../../assets/images/portfolio5.png";
 import portfolio6 from "../../assets/images/portfolio6.png";
+import portfolio7 from "../../assets/images/portfolio7.png";
 import placeholder from "../../assets/images/placeholder.png";
 
 const Projects = () => {
@@ -15,6 +16,15 @@ const Projects = () => {
   const projectsRef = useRef(null);
 
   const projects = [
+    {
+      title: "Bespoke Dashboard",
+      description:
+        "Bespoke Dashboard is a private personal dashboard for tracking health, habits, skincare, spending and net worth in one place. Users build their own board by dragging on the widgets they care about and recolouring it to suit them. It includes daily logs for water, weight and workouts, recurring to-dos, progress photo comparisons and a net worth tracker. Each account's data is protected with row level security, and new features can be added through plugins.",
+      technologies: ["Astro", "TypeScript", "JavaScript", "PostgreSQL", "Tailwind"],
+      githubUrl: "",
+      demoUrl: "https://bespokedashboard.com/",
+      imageUrl: portfolio7,
+    },
     {
       title: "Founders Hut",
       description:

@@ -17,6 +17,8 @@ import nextjsLogo from "../assets/nextjs.svg";
 import clerkLogo from "../assets/clerk.svg";
 import sentryLogo from "../assets/sentry.svg";
 import stripeLogo from "../assets/stripe.svg";
+import astroLogo from "../assets/astro.svg";
+import postgresqlLogo from "../assets/postgresql.svg";
 
 // Add this object at the top of your component or in a separate config file
 const techLogos = {
@@ -35,6 +37,8 @@ const techLogos = {
   Clerk: clerkLogo,
   Sentry: sentryLogo,
   Stripe: stripeLogo,
+  Astro: astroLogo,
+  PostgreSQL: postgresqlLogo,
   // Add more mappings as needed
 };
 
